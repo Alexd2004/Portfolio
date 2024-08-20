@@ -1,0 +1,1668 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height:120px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+#navbar__logo {
+    
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;;
+    text-decoration: none;
+    font-size: 32px;
+
+    
+}
+
+.fa-gem {
+    margin-right: 8px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+
+}
+
+.navbar__links{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 100%;
+
+}
+
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3 ease;
+}
+
+    
+
+.ab{
+    background-color: #141414;
+}
+.about{
+    
+
+    margin: 0 auto;
+    height: 15vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 75px 50px 0 50px;
+}
+.about__container{
+    display: flex;
+    justify-content: center;
+}
+
+.about__container h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+/* About section */
+.main{
+    background-color: #141414;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 83vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+
+}
+.main__content{
+    height: 500px;
+}
+.main__content h2 {
+    font-size: 3.5rem;
+    margin-top: 10px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    height: 100px;
+    padding-left: 75px;
+
+    
+  }
+
+  .main__content p {
+    font-size: 25px;
+    font-weight: 700;
+    height:100px;
+    padding-left: 75px;
+    color: white;
+    line-height: 175%
+
+  }
+  
+
+  @media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex; 
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+
+
+    }
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active{
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index:99;
+        height: 50vh;
+        font-size: 25px;
+
+    }
+
+    #navbar__logo{
+        padding-left: 20px;
+        
+    }
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    
+    }
+    .navbar__item {
+        width: 100%;
+
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .about {
+        padding: 50px 25px 0 25px;
+        height: auto;
+    }
+
+    .about__container{
+        display: flex;
+        justify-content: center;
+    }
+    .about__container h1 {
+        font-size: 3rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .UNI, .degree{
+        font-size: 24px;
+    }
+    .skillerbanner__container {
+        height: 15vh;
+        padding: 50px 30px 0 30px;
+    }
+
+    .skillerbanner__container h1 {
+        font-size: 3rem;
+    }
+    .skillbanner {
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .line, .line3, .line4 {
+        width: 300px;
+    }
+
+    .skill__container {
+        padding: 0 20px;
+    }
+
+    .skill__content {
+        height: auto;  /* Use auto height to adjust to content */
+        padding: 20px;
+    }
+
+    .skill__content .title__Skill1,
+    .skill__content .title__Skill2,
+    .skill__content .title__Skill3 {
+        font-size: 1.5rem; /* Reduce the font size */
+    }
+    .flabel, .html, .css, .javascript, .python, .JAVA, .ARM, .Django, .Numpy, .Junit, .JavaFX, .VScode, .PS, .Eclipse {
+        width: 90%;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .image {
+        height: 70px;
+        width: 70px;
+    }
+    .html image, .css image, .javascript image, .python image, .JAVA image, .ARM image, .Django image, .Numpy image, .Junit image, .JavaFX image, .VScode image, .PS image, .Eclipse image {
+        width: 90px;
+    }
+    .projectbanner__container {
+        padding: 50px 30px 0 30px;
+    }
+
+    .projectbanner__container h1 {
+        font-size: 3rem;
+        margin: 0 10px;
+    }
+
+    .project__container {
+        padding: 0 30px;
+    }
+
+    .section {
+        padding: 30px;
+    }
+
+    .info__box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .PPW__title h1 {
+        font-size: 34px;
+    }
+
+    .PPW__title p {
+        font-size: 18px;
+    }
+
+    .PPWLANGUAGE p {
+        font-size: 18px;
+    }
+
+    .PPWLANGUAGE__word {
+        font-size: 22px;
+    }
+
+    .PPWDESCRIPTION {
+        font-size: 16px;
+    }
+
+    .image__box, .image__box2 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .WIP {
+        font-size: 18px;
+    }
+
+  
+   
+
+
+}
+
+  @media screen and (max-width: 768px){
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+    .main__content {
+        text-align: center  ;
+        margin-bottom: 4rem;
+
+    }
+
+    .main__content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+
+    }
+    .main__content h2 {
+        font-size: 3rem;
+
+    }
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .UNI, .degree {
+        font-size: 20px;
+    }
+    .main__img--container{
+        padding: 20px 0;
+    }
+    #main__img {
+        height: 50%;
+        width: 50%;
+    }
+    .about {
+        padding: 40px 20px 0 20px;
+    }
+    .about__container{
+        display: flex;
+        justify-content: center;
+    }
+    .about__container h1 {
+        font-size: 2.5rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .skillerbanner__container h1 {
+        font-size: 2.5rem;
+    }
+    .skillbanner {
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .line, .line3, .line4 {
+        width: 200px;
+    }
+
+    .skill__content .title__Skill1,
+    .skill__content .title__Skill2,
+    .skill__content .title__Skill3 {
+        font-size: 1.2rem; /* Further reduce the font size */
+    }
+    .flabel, .html, .css, .javascript, .python, .JAVA, .ARM, .Django, .Numpy, .Junit, .JavaFX, .VScode, .PS, .Eclipse {
+        margin: 2px;
+    }
+    .image {
+        height: 60px;
+        width: 60px;
+    }
+    .html image, .css image, .javascript image, .python image, .JAVA image, .ARM image, .Django image, .Numpy image, .Junit image, .JavaFX image, .VScode image, .PS image, .Eclipse image {
+        width: 80px;
+    }
+    .projectbanner__container {
+        padding: 40px 20px 0 20px;
+    }
+
+    .projectbanner__container h1 {
+        font-size: 2.5rem;
+        margin: 0 8px;
+    }
+
+    .project__container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .info__box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .PPW__title h1 {
+        font-size: 30px;
+    }
+
+    .PPW__title p {
+        font-size: 16px;
+    }
+
+    .PPWLANGUAGE p {
+        font-size: 16px;
+    }
+
+    .PPWLANGUAGE__word {
+        font-size: 20px;
+    }
+
+    .PPWDESCRIPTION {
+        font-size: 15px;
+    }
+
+    .image__box, .image__box2 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .WIP {
+        font-size: 16px;
+    }
+  
+
+
+
+
+}
+@media screen and (max-width: 480px){
+
+    .main__content h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+
+    }
+    .main__content h2 {
+        font-size: 2rem;
+
+    }
+    .main__content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .UNI, .degree{
+        font-size: 1.125rem;
+
+    }
+    .main__img--container{
+        padding: 10px 0;
+    }
+    #main__img {
+        height: 40%;
+        width: 40%;
+    }
+    .about{
+        padding: 30px 10px 0 10px;
+    }
+    .about__container{
+        display: flex;
+        justify-content: center;
+    }
+    .about__container h1 {
+        font-size: 2rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .skillerbanner__container h1 {
+        font-size: 2rem;
+    }
+
+    .line, .line3, .line4 {
+        width: 150px;
+    }
+
+    .skill__content .title__Skill1,
+    .skill__content .title__Skill2,
+    .skill__content .title__Skill3 {
+        font-size: 1rem; /* Further reduce the font size for smallest screens */
+    }
+    .flabel, .html, .css, .javascript, .python, .JAVA, .ARM, .Django, .Numpy, .Junit, .JavaFX, .VScode, .PS, .Eclipse {
+        margin: 2px;
+    }
+    .image {
+        height: 50px;
+        width: 50px;
+    }
+    .html image, .css image, .javascript image, .python image, .JAVA image, .ARM image, .Django image, .Numpy image, .Junit image, .JavaFX image, .VScode image, .PS image, .Eclipse image {
+        width: 70px;
+    }
+    .projectbanner__container {
+        padding: 30px 15px 0 15px;
+    }
+    .skillbanner {
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .projectbanner__container h1 {
+        font-size: 2rem;
+        margin: 0 5px;
+    }
+
+    .project__container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .info__box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .PPW__title h1 {
+        font-size: 26px;
+    }
+
+    .PPW__title p {
+        font-size: 14px;
+    }
+
+    .PPWLANGUAGE p {
+        font-size: 14px;
+    }
+
+    .PPWLANGUAGE__word {
+        font-size: 18px;
+    }
+
+    .PPWDESCRIPTION {
+        font-size: 14px;
+    }
+
+    .image__box, .image__box2 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .WIP {
+        font-size: 14px;
+    }
+  
+}
+
+
+
+
+.UNI{
+    font-style: italic;
+    font-size: 27px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-20deg, #fdce21 33%, #7621fd 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+
+}
+
+.degree {
+    font-style: italic;
+    font-size: 27px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-120deg, #fdce21 40%, #7621fd 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    height: 60%;
+    width: 60%;
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+/*  Skill section below*/
+
+
+
+
+
+
+
+
+.skillbanner {
+    background-color: #141414;
+    
+}
+.skillerbanner__container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 20vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 75px 50px 0 50px;
+
+}
+.skillerbanner__container h1{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin: 0 15px; /* Added margin to separate the line from the text */
+    display: inline-block; /* Make the block inline to correctly center it vertically */
+    vertical-align: middle; 
+
+}
+.line {
+    width: 400px;
+    height: 1px;
+    background: white;
+    align-self: center;
+
+}
+
+.line3 {
+    width: 400px;
+    height: 1px;
+    background: white;
+    align-self: center;
+}
+.line4 {
+    width: 430px;
+    height: 1px;
+    background: white;
+    align-self: center;
+}
+.skill {
+    background-color: #141414;
+}
+.skill__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+
+}
+.skill__content {
+    background-color:#141414 ;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding-top: 20px;
+    overflow-x: auto;
+    height: 640px;
+    width: 100%;
+    padding: 40px;
+    justify-content: flex-start;
+    
+    margin-top: 0px;
+    border-radius: 200px;
+
+}
+
+
+
+.skill__content .title__Skill1{
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+
+
+}
+.skill__content .title__Skill2{
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+
+}
+.skill__content .title__Skill3{
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+/*  CHECKPOINT */
+
+
+.flabel {
+    height: 200px;
+    flex-wrap: nowrap;
+    color: #141414;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+/* Image background box work*/
+.html{
+    position: relative;
+    transition: background-color 0.5s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex: 1 1 0;
+    background-color: #fc5424;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.css {
+    position: relative;
+    transition: background-color 0.5s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    
+    width: 150px;
+    flex: 1 1 0;
+    background-color: #264de4;
+}
+.javascript{
+    position: relative;
+    transition: background-color 0.5s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    
+    width: 100px;
+    flex: 1 1 0;
+    background-color: #dab92d ;
+
+}
+
+.python{
+    position: relative;
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex: 1 1 0;
+    background-color: #4F523E;
+
+}
+
+.JAVA {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex: 1 1 0;
+    background-color: white;
+}
+
+.ARM {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex: 1 1 0;
+    background-color: #fad2b9;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Django {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 120px;
+    flex: 1 1 0;
+    background-color: #092e20 ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.Numpy  {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 120px;
+    flex: 1 1 0;
+    background-color:#d06c4c;
+}
+
+.Junit {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 120px;
+    flex: 1 1 0;
+    background-color: #a12564;
+}
+
+.JavaFX {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 120px;
+    flex: 1 1 0;
+    background-color:#091228 ;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.VScode   {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color:#8311cf ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.PS{
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color:#ff3500 ;
+}
+
+.Vim {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #154c79 ;
+}
+.Jupyter {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #9e4e15 ;
+}
+.Git {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #1750aa ;
+}
+.Eclipse {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #2c5522;
+
+}
+.Mongo {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #211f41;
+
+}
+
+.Express {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #a9a9a9;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Node {
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background-color: #21481d;
+}
+
+.C{
+    position: relative; 
+    transition: background-color 0.5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 140px;
+    flex: 1 1 0;
+    background: #4772a1;
+
+}
+
+
+
+.image{
+    height: 80px;
+    width: 80px;
+}
+.python .image {
+    height: 60px;
+    width: 60px;
+  
+}
+.PS .image {
+    width: 120px;
+}
+.JavaFX .image{
+    width: 110px;
+}
+.Node .image {
+     width: 100px;
+}
+
+/* neccesary code for blurry affect */
+.html:hover, .Node:hover, .Express:hover, .Mongo:hover, .Git:hover, .Jupyter:hover, .Vim:hover, .css:hover, .javascript:hover, .python:hover, .JAVA:hover, .ARM:hover, .Django:hover, .Numpy:hover, .Junit:hover, .JavaFX:hover, .VScode:hover, .PS:hover, .Eclipse:hover, .C:hover {
+    backdrop-filter: blur(5px);
+}
+
+/* Pseudo-elements for the hover text */
+.html:hover::before, .Node:hover::before, .Express:hover::before, .Mongo:hover::before, .Git:hover::before, .Jupyter:hover::before, .Vim:hover::before, .css:hover::before, .javascript:hover::before, .python:hover::before, .JAVA:hover::before, .ARM:hover::before, .Django:hover::before, .Numpy:hover::before, .Junit:hover::before, .JavaFX:hover::before, .VScode:hover::before, .PS:hover::before, .Eclipse:hover::before, .C:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    z-index: 2; /* Above the overlay */
+}
+
+/* Image styling to make sure it goes below the blurred overlay */
+.html image, .Node image, .Express image, .Mongo image, .Git image, .Jupyter image, .Vim image, .css image, .javascript image, .python image, .JAVA image, .ARM image, .Django image, .Numpy image, .Junit image, .JavaFX image, .VScode image, .PS image, .Eclipse image, .C image {
+    z-index: 0; /* Below the overlay */
+    transition: filter 0.3s ease;
+}
+
+.html::after, .Node::after, .Express::after, .Mongo::after, .Git::after, .Jupyter::after, .Vim::after,  .css::after, .C::after, .javascript::after, .python::after, .JAVA::after, .ARM::after, .Django::after, .Numpy::after, .Junit::after, .JavaFX::after, .VScode::after, .PS::after, .Eclipse::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 4B4343; /* Slight white overlay, you can adjust this as needed */
+    pointer-events: none; /* To ensure hover events get to the actual container */
+    backdrop-filter: blur(0); /* Initialize to no blur */
+    transition: backdrop-filter 0.3s ease;
+}
+
+.html:hover::after,  .Node:hover::after, .Express:hover::after, .Mongo:hover::after, .Git:hover::after, .Jupyter:hover::after, .Vim:hover::after, .css:hover::after, .C:hover::after, .javascript:hover::after, .python:hover::after, .JAVA:hover::after, .ARM:hover::after,.Django:hover::after, .Numpy:hover::after, .Junit:hover::after, .JavaFX:hover::after, .VScode:hover::after, .PS:hover::after, .Eclipse:hover::after {
+    backdrop-filter: blur(5px);
+}
+/* Image styling */
+.html image, .css image, .Node image, .Express image, .Mongo image, .Git image, .Jupyter image, .Vim image, .javascript image, .python image, .JAVA image, .ARM image, .Django image, .Numpy image, .Junit image, .JavaFX image, .VScode image, .PS image, .Eclipse image, .C image  {
+    position: relative;
+    z-index: 1; 
+    transition: filter 0.3s ease;
+}
+.html:hover::before,  .Node:hover::before, .Express:hover::before, .Mongo:hover::before, .Git:hover::before, .Jupyter:hover::before, .Vim:hover::before, .css:hover::before, .C:hover::before .javascript:hover::before, .python:hover::before, .JAVA:hover::before, .ARM:hover::before, .Django:hover::before, .Numpy:hover::before, .Junit:hover::before, .JavaFX:hover::before, .VScode:hover::before, .PS:hover::before, .Eclipse:hover::before {
+    /* ... existing styles ... */
+    z-index: 3; /* Above the overlay and image */
+}
+
+
+.html::after {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.ARM::after {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.Django::after {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.VScode::after{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.JavaFX::after{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.Eclipse::after{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Express::after {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/* Checkpoint */
+
+
+
+
+
+
+
+
+
+
+
+
+.projectbanner {
+    background-color: #141414;
+    
+}
+.projectbanner__container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 20vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 75px 50px 0 50px;
+
+}
+.projectbanner__container h1{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin: 0 15px; /* Added margin to separate the line from the text */
+    display: inline-block; /* Make the block inline to correctly center it vertically */
+    vertical-align: middle; 
+
+}
+
+
+
+.project {
+    background-color: #141414;
+}
+.project__container{
+    margin: 0 auto;
+    height: 950px;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    display: flex; /* Set to flex to use flexbox properties */
+    justify-content: center;
+    
+    
+}
+.section1, .section2 {
+
+    width: 450px;
+    
+}
+.section2 {
+    padding-left: 20px;
+}
+
+.section__seperation {
+    width: 300px;
+}
+.section__seperationLE {
+    width: 50px;
+}
+
+.outside__box {
+    padding-bottom: 100px;
+}
+
+
+.image__box {
+    align-self: center;
+    height: 255px;
+    width: 400px;
+    background-color: #434343;
+    border-radius: 12.5px;
+
+    /*
+    box-shadow: 0px 0px 20px 10px #30251e;
+    animation: shadows 1.5s infinite;
+    */
+ 
+
+}
+/*
+.image__PPW{
+    transition: transform 0.3s ease
+}
+.image__PPW:hover {
+    transform: scale(1.1); /* Scales the image up to 110% of its original size on hover 
+    box-shadow: 0px 0px 20px 10px #30251e; 
+}
+*/
+
+.info__box {
+    height: 60px;
+    width: auto;
+    color: white;
+}
+
+
+.PH{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    padding-top:20px;
+}
+
+.PH {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+}
+.year {
+    font-size: 15px;
+    
+}
+
+.PPWLANGUAGE__word {
+    font-weight: bold;
+    font-size: 25px;
+}
+.info__box p {
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    padding-top: 8px;
+
+}
+
+.HTMLPR {
+    color: #fc5424;
+    font-weight: bold;
+}
+.CSSPR {
+    color: #264de4;
+    font-weight: bold;
+}
+.JSPR {
+    color: #dab92d;
+    font-weight: bold;
+}
+
+.NOPR {
+    color: #21481d;
+}
+
+
+
+.miniproject {
+    background-color: #141414;
+}
+
+.miniproject__container {
+    margin: 0 auto;
+    height: 400px;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    ;
+}
+
+.minipro {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding: 0 50px
+}
+
+.minibox {
+   width: 250px;
+   height: 300px; 
+   padding-left: 25px;
+   padding-right: 25px;
+
+
+   
+}
+
+.miniimagebox img {
+    height: 150px;
+    width: 225px;
+    border-radius: 12.5px;
+}
+
+.MPH {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 13px;
+    padding-top:20px;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.miniyear {
+    font-size: 10px;
+}
+
+.miniimageboxchat {
+    
+    height: 150px;
+    width: 225px;
+    background-color: #0c0c0c;
+    
+    border-radius: 12.5px;
+
+    
+}
+
+.miniimagebox {
+    height: 150px;
+    width: 225px;
+    background-color: #434343;
+    
+    border-radius: 12.5px;
+}
+
+.miniimageboxchat .miniimagechat {
+    height: 100px;
+    width: 200px;
+    text-align: center; 
+    background-color: #0c0c0c;
+    border-radius: 12.5px;
+
+}
+.minisep {
+    width: 50px;
+}
+.miniinfo__box {
+    height: 30px;
+    width: auto;
+    color: white;
+}
+
+.miniinfo__box p {
+    font-style: italic;
+    font-size: 13px;
+    color: white;
+    padding-top: 4px;
+}
+
+.MINIPPWLANGUAGE__word {
+    font-size:  18px;
+}
+
+
+
+
+
+/*
+#264de4;fc5424,dab92d
+.seperation{
+    width: 200px;
+    align-self: center;
+}
+.info__box {
+    align-self: center;
+    height: 350px;
+    width: 600px;
+    background-color: #141414;
+    padding-top: 30px;
+}
+
+.PPW__title{
+    
+    height: 100px;
+}
+.PPW__title h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    padding-top:20px;
+    
+}
+
+.PPW__title p{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    
+}
+
+
+.PPWLANGUAGE {
+    height: 60px;
+    width: auto;
+    padding-top: 20px;
+    
+}
+.PPWLANGUAGE p {
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+}
+.PPWLANGUAGE__word{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.PPWDESCRIPTION {
+    height:50px;
+    font-size: 17.5px;
+    color: white;
+    
+    padding-top: 20px;
+
+}
+
+
+/* Image work including the transition for glow affect */
+/*
+.image__box {
+    align-self: center;
+    height: 250px;
+    width: 400px;
+    background-color: #434343;
+    box-shadow: 0px 0px 20px 10px #48abe0;
+    animation: shadows 1.5s infinite;
+
+
+}
+*/
+
+@keyframes shadows {
+    0% {
+      text-shadow: #48abe0 0 0 10px;
+      box-shadow: 0px 0px 20px 10px #48abe0;
+    }
+    50% {
+      text-shadow: blueviolet 0 0 10px;
+      box-shadow: 0px 0px 20px 10px blueviolet;
+    }
+    75% {
+      text-shadow: rebeccapurple 0 0 10px;
+      box-shadow: 0px 0px 20px 10px rebeccapuprle;
+    }
+    100% {
+      text-shadow: #48abe0 0 0 10px;
+      box-shadow: 0px 0px 20px 10px #48abe0;
+    }
+  }
+
+  .WIP{
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #0A9841 0%, #b6e0c6 75%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+    font-style: italic;
+    font-size:20px;
+    padding-top: 20px;
+  }
+  .WIPIMAGE {
+    margin:auto;
+    vertical-align:middle;
+    color: white;
+  }
+
+  .image__box2 {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    height: 250px;
+    width: 400px;
+    background-color: #434343;
+    box-shadow: 0px 0px 20px 10px #48abe0;
+    animation: shadows 1.5s infinite;
+  }
+
+
+  .footer{
+    height: 100px;
+    background-color: #141414;
+    display: flex;
+    align-content: center;
+  }
+  .footer__content {
+    color: white;
+    align-self: center;
+    margin:auto;
+  }
+
+.linefooter {
+    width: 400px;
+    height: 1px;
+    background: white;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For screens with a maximum width of 480px */
+@media only screen and (max-width: 480px) {
+    .skillerbanner__container {
+        padding: 50px 25px 0 25px;
+    }
+
+    .skillerbanner__container h1 {
+        font-size: 2.5rem;
+    }
+
+    .line, .line3, .line4 {
+        width: 250px;
+    }
+
+    .skill__container {
+        padding: 0 25px;
+    }
+
+    .skill__content {
+        height: 400px;
+        padding: 20px;
+    }
+
+    /* ... adjust other styles as needed ... */
+}
+
+/* For screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+    .skillerbanner__container {
+        padding: 60px 30px 0 30px;
+    }
+
+    .skillerbanner__container h1 {
+        font-size: 3.5rem;
+    }
+
+    .line, .line3, .line4 {
+        width: 350px;
+    }
+
+    .skill__container {
+        padding: 0 30px;
+    }
+
+    .skill__content {
+        height: 520px;
+        padding: 30px;
+    }
+
+    /* ... adjust other styles as needed ... */
+}
+
+
+
+
+
+
+
+/* This will be the skills seciton */
